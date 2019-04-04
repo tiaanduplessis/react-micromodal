@@ -1,12 +1,45 @@
-import React, { Component } from 'react'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import ExampleComponent from 'react-micromodal'
+import Modal from 'react-micromodal'
 
-export default class App extends Component {
-  render () {
+import './index.css'
+
+export default class App extends React.Component {
+  state = {
+    show: false,
+  }
+
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ show: true })
+
+      setTimeout(() => {
+        this.setState({ show: false })
+      }, 3000)
+    }, 3000)
+
+  }
+
+  render() {
+    const { show } = this.state
     return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
+      <div className="App">
+        <h1>Wait for it</h1>
+
+        <Modal
+          show={show}
+          onShow={() => console.log('Showing!')}
+          onClose={() => console.log('Closing down')}
+          disableScroll={false}
+          disableFocus={false}
+          awaitCloseAnimation={false}
+          debugMode={false}
+
+        >
+          <h1>Hello</h1>
+        </Modal>
       </div>
     )
   }

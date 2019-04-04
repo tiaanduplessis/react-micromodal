@@ -1,8 +1,8 @@
 {
-  "name": "react-micromodal",
+  "name": "react-micromodal.js",
   "version": "1.0.0",
   "description": "React wrapper for Micromodal.js",
-  "author": "tiaanduplessis",
+  "author": "Tiaan du Plessis <tiaanduplessis@hotmail.com>",
   "license": "MIT",
   "repository": "tiaanduplessis/react-micromodal",
   "main": "dist/index.js",
@@ -22,7 +22,6 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.4",
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0"
   },
@@ -57,5 +56,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "micromodal": "^0.3.2",
+    "pico-uid": "^1.0.2"
+  }
 }

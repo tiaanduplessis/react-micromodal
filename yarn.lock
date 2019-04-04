@@ -6776,6 +6776,11 @@ micromatch@^3.1.10, micromatch@^3.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
+micromodal@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/micromodal/-/micromodal-0.3.2.tgz#c5f8d3f80ca822a3a84df152a830bd4a7bf1ceb6"
+  integrity sha512-xRON1OqD9G8FfI1qShYTtJZaN77x03QR2UnkpL7H17877lATNJoV8XHR+nrnc2FqgXqjFdaYJYidbfISecMlNQ==
+
 miller-rabin@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/miller-rabin/-/miller-rabin-4.0.1.tgz#f080351c865b0dc562a8462966daa53543c78a4d"
@@ -7559,6 +7564,11 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
+
+pico-uid@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/pico-uid/-/pico-uid-1.0.2.tgz#68332927f7076cb209b433df378318c69ceff51d"
+  integrity sha512-Uzxa3+S5e2Jf5oWrYmHl6JubLKAnoNbfJOTGUA/F/HfO4n5KZFMYcIk4c2JDoX4UaV4kVNVwFY/fXjlDKCRGQw==
 
 pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"

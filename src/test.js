@@ -1,7 +1,7 @@
-import ExampleComponent from './'
+import MicroModal from './'
 
-describe('ExampleComponent', () => {
-  it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+describe('MicroModal', () => {
+  it('is defined', () => {
+    expect(MicroModal).toBeTruthy()
   })
 })

@@ -1,22 +1,53 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import { Component } from 'react'
+import ReactDOM from 'react-dom'
+import MM from 'micromodal'
+import uid from 'pico-uid'
 
-import styles from './styles.css'
+import './styles.css'
 
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
+class MicroModal extends Component {
+  constructor(props) {
+    super(props)
+    this.el = document.createElement('div')
+    this.id = uid()
+    this.el.id = this.id
+    this.el.classList.add(...this.props.className.split(' '))
+  }
+
+  static defaultProps = {
+    className: 'modal',
+    root: document.body,
+    onShow: () => { },
+    onClose: () => { },
+    disableScroll: false,
+    disableFocus: false,
+    awaitCloseAnimation: false,
+    debugMode: false,
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps.show) {
+      MM.show(this.id, {
+        ...nextProps,
+      })
+    } else {
+      MM.close(this.id)
+    }
+
+    return true
+  }
+
+  componentDidMount() {
+    this.props.root.appendChild(this.el)
+  }
+
+  componentWillUnmount() {
+    this.props.root.removeChild(this.el)
   }
 
   render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
+    return ReactDOM.createPortal(this.props.children, this.el)
   }
 }
+
+export default MicroModal
