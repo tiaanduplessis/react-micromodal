@@ -22,23 +22,24 @@ class MicroModal extends Component {
     disableScroll: false,
     disableFocus: false,
     awaitCloseAnimation: false,
-    debugMode: false,
+    debugMode: false
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    if (nextProps.show) {
-      MM.show(this.id, {
-        ...nextProps,
-      })
+  componentDidUpdate(prevProps) {
+    if (!!prevProps.show === !!this.props.show) return
+
+    if (this.props.show) {
+      MM.show(this.id, { ...this.props })
     } else {
       MM.close(this.id)
     }
-
-    return true
   }
 
   componentDidMount() {
     this.props.root.appendChild(this.el)
+    if (this.props.show) {
+      MM.show(this.id, { ...this.props })
+    }
   }
 
   componentWillUnmount() {
