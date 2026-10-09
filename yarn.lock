@@ -6776,10 +6776,10 @@ micromatch@^3.1.10, micromatch@^3.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
-micromodal@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/micromodal/-/micromodal-0.3.2.tgz#c5f8d3f80ca822a3a84df152a830bd4a7bf1ceb6"
-  integrity sha512-xRON1OqD9G8FfI1qShYTtJZaN77x03QR2UnkpL7H17877lATNJoV8XHR+nrnc2FqgXqjFdaYJYidbfISecMlNQ==
+micromodal@^0.4.6:
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/micromodal/-/micromodal-0.4.6.tgz#0425ad026c47923208cf826de6b58ed0693cb25a"
+  integrity sha512-2VDso2a22jWPpqwuWT/4RomVpoU3Bl9qF9D01xzwlNp5UVsImeA0gY4nSpF44vqcQtQOtkiMUV9EZkAJSRxBsg==
 
 miller-rabin@^4.0.0:
   version "4.0.1"

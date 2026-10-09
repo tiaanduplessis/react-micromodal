@@ -58,7 +58,7 @@
     "dist"
   ],
   "dependencies": {
-    "micromodal": "^0.3.2",
+    "micromodal": "^0.4.6",
     "pico-uid": "^1.0.2"
   }
 }
